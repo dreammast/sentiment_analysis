@@ -7,7 +7,22 @@ from sklearn.naive_bayes import MultinomialNB
 st.title("Sentiment Analysis App")
 
 # Provide the full file path directly
+import streamlit as st
+import pandas as pd
+import os
+
+# File path
 file_path = 'generic_sentiment_dataset_50k.csv'
+
+if os.path.exists(file_path):
+    # Load your dataset for training
+    df = pd.read_csv(file_path)
+    st.write("### Preview of the Dataset")
+    st.write(df.head())
+else:
+    st.error("Data file not found. Please upload the file or check the path.")
+    st.stop()
+
 
 try:
     # Load your dataset for training
