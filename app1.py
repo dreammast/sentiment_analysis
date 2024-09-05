@@ -7,7 +7,7 @@ from sklearn.naive_bayes import MultinomialNB
 st.title("Sentiment Analysis App")
 
 # Provide the full file path directly
-file_path = 'C:\\Users\\dream\\Downloads\\generic_sentiment_dataset_50k.csv'
+file_path = 'generic_sentiment_dataset_50k.csv'
 
 try:
     # Load your dataset for training
